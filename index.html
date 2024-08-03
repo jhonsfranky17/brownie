@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heavenly Bites</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="output.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      .slide-in-right {
+        animation: slideInRight 1s ease-in forwards;
+      }
+      .slide-in-left {
+        animation: slideInLeft 1s ease-in forwards;
+      }
+      /* styles.css */
+      @keyframes popIn {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        25% {
+          transform: scale(0.8);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        75% {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .pop-in {
+        animation: popIn 2s ease-in forwards;
+      }
+
+      .hidden {
+        display: none;
+      }
+      .selected {
+        background-color: #f59e0b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Wrapper -->
+    <div class="h-dvh w-full relative overflow-hidden">
+      <video
+        class="absolute top-0 left-0 w-full h-full object-cover brightness-50"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source src="./assets/videos/backdrop.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <!-- Hero -->
+      <div
+        class="relative z-10 flex flex-col text-white justify-center items-center h-full"
+      >
+        <!-- Backdrop -->
+        <div
+          id="backdrop"
+          class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden justify-center items-center"
+        ></div>
+        <nav class="w-full text-center text-6xl pt-5 font-pacifico">
+          Heavenly Bites
+        </nav>
+        <div
+          class="w-full h-full flex flex-col justify-center items-center gap-10"
+        >
+          <a href="./book.html"
+            ><h1
+              id="title"
+              class="font-redhat font-bold px-10 py-5 bg-amber-500"
+            >
+              Indulge in Our Signature Brownie Creations
+            </h1></a
+          >
+          <div class="grid grid-cols-4 gap-10 w-3/4">
+            <!-- White Brownie -->
+            <div class="flex flex-col gap-2 slide-in-left div white">
+              <div class="relative group">
+                <img
+                  src="./assets/brownies/pexels-chudesabyvaut-1351350-2864545.jpg"
+                  alt=""
+                  class="h-[29rem] object-fill w-full"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between gap-5 p-10 font-medium"
+                >
+                  <span
+                    class="font-redhat text-white text-lg opacity-0 group-hover:opacity-100 duration-1000"
+                    >Our White Chocolate Brownie is a delightful twist on the
+                    classic treat! This brownie combines the creamy sweetness of
+                    white chocolate with a soft, melt-in-your-mouth texture.
+                    Perfectly balanced and irresistibly rich, it's a heavenly
+                    option for those who love the lighter, more delicate side of
+                    chocolate.</span
+                  >
+                  <button
+                    class="font-redhat font-bold opacity-0 bg-amber-500 hover:bg-amber-600 px-5 py-2 group-hover:opacity-100 duration-1000"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+              <h4 class="font-redhat text-center font-bold">
+                White Chocolate Brownie
+              </h4>
+            </div>
+            <!-- Classic Brownie -->
+            <div class="flex flex-col gap-2 slide-in-left div classic">
+              <div class="relative group">
+                <img
+                  src="./assets/brownies/pexels-koshkit-887850.jpg"
+                  alt=""
+                  class="h-[29rem] object-fill w-full"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between gap-5 p-10 font-medium"
+                >
+                  <span
+                    class="font-redhat text-white text-lg opacity-0 group-hover:opacity-100 duration-1000"
+                    >Our Classic Brownie is the heart of our collection,
+                    featuring a timeless recipe that delivers a perfectly fudgy
+                    texture and deep chocolate flavor. It's the ultimate treat
+                    for purists who appreciate the simple pleasures of a
+                    well-crafted brownie.</span
+                  >
+                  <button
+                    class="font-redhat font-bold opacity-0 bg-amber-500 hover:bg-amber-600 px-5 py-2 group-hover:opacity-100 duration-1000"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+              <h4 class="font-redhat text-center font-bold">Classic Brownie</h4>
+            </div>
+            <!-- Roasted Nuts Brownie -->
+            <div class="flex flex-col gap-2 slide-in-right div roasted">
+              <div class="relative group">
+                <img
+                  src="./assets/brownies/pexels-karolina-grabowska-5386665.jpg"
+                  alt=""
+                  class="h-[29rem] object-fill w-full"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between gap-5 p-10 font-medium"
+                >
+                  <span
+                    class="font-redhat text-white text-lg opacity-0 group-hover:opacity-100 duration-1000"
+                    >Experience the perfect blend of crunch and chocolate with
+                    our Roasted Nuts Brownie. This brownie features a rich,
+                    fudgy base infused with a generous mix of roasted nuts,
+                    adding a delightful crunch and a nutty depth of flavor. It's
+                    the perfect choice for those who crave a little extra
+                    texture and taste in their brownies!</span
+                  >
+                  <button
+                    class="font-redhat font-bold opacity-0 bg-amber-500 hover:bg-amber-600 px-5 py-2 group-hover:opacity-100 duration-1000"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+              <h4 class="font-redhat text-center font-bold">
+                Roasted Nuts Brownie
+              </h4>
+            </div>
+            <!-- Bliss Box Brownie -->
+            <div class="flex flex-col gap-2 slide-in-right div bliss">
+              <div class="relative group">
+                <img
+                  src="./assets/brownies/pexels-withoguz-25639472.jpg"
+                  alt=""
+                  class="h-[29rem] object-fill w-full"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between gap-5 p-10 font-medium"
+                >
+                  <span
+                    class="font-redhat text-white text-lg opacity-0 group-hover:opacity-100 duration-1000"
+                    >Our specially curated Bliss Box is perfect for any
+                    occasion, offering an assortment of our finest brownies,
+                    including the Classic Brownie, White Chocolate Brownie, and
+                    the Roasted Nuts Brownie. Each brownie is crafted with
+                    high-quality ingredients to ensure a rich, indulgent
+                    experience in every bite.</span
+                  >
+                  <button
+                    class="font-redhat font-bold opacity-0 bg-amber-500 hover:bg-amber-600 px-5 py-2 group-hover:opacity-100 duration-1000"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+              <h4 class="font-redhat text-center font-bold">Bliss Box</h4>
+            </div>
+          </div>
+        </div>
+        <!-- White Brownie Order -->
+        <div
+          id="white"
+          class="gap-10 w-1/2 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
+        >
+          <div class="relative">
+            <img
+              src="./assets/brownies/pexels-chudesabyvaut-1351350-2864545.jpg"
+              alt="classic-brownie"
+              class="h-[29rem] object-fill w-full"
+            />
+          </div>
+          <div class="flex flex-col justify-between flex-1">
+            <div class="flex flex-col gap-2">
+              <h1 id="item-name" class="font-bold text-2xl">
+                White Chocolate Brownie
+              </h1>
+              <h3 class="font-semibold">Packaging</h3>
+              <!-- Radio Buttons for Pack -->
+              <div class="flex gap-3">
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="pack-of-4-white"
+                >
+                  <input
+                    type="radio"
+                    id="pack-of-4-white"
+                    name="packaging-white"
+                    value="280"
+                    class="hidden"
+                    checked
+                  />
+                  Pack of 4
+                </label>
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="pack-of-6-white"
+                >
+                  <input
+                    type="radio"
+                    id="pack-of-6-white"
+                    name="packaging-white"
+                    value="420"
+                    class="hidden"
+                  />
+                  Pack of 6
+                </label>
+              </div>
+              <h3 class="font-semibold">Varieties</h3>
+              <!-- Radio Buttons for Egg -->
+              <div class="flex gap-3" id="varieties">
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="eggs-white"
+                >
+                  <input
+                    type="radio"
+                    id="eggs-white"
+                    name="varieties-white"
+                    value="0"
+                    class="hidden"
+                    checked
+                  />
+                  With Eggs
+                </label>
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="eggless-white"
+                >
+                  <input
+                    type="radio"
+                    id="eggless-white"
+                    name="varieties-white"
+                    value="30"
+                    class="hidden"
+                  />
+                  Eggless
+                </label>
+              </div>
+
+              <h2 class="font-semibold">Name</h2>
+              <input
+                id="name"
+                type="text"
+                class="bg-transparent border py-2"
+                required
+              />
+              <h2 class="font-semibold">Contact Number</h2>
+              <input
+                type="text"
+                name="contact"
+                id="contact"
+                class="bg-transparent border py-2"
+                required
+              />
+              <h3 class="flex gap-3 items-center">
+                <span class="text-4xl">₹</span>
+                <span class="text-4xl font-extrabold" id="pricing"></span>
+              </h3>
+            </div>
+            <button
+              type="submit"
+              id="order"
+              class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
+            >
+              Order
+            </button>
+          </div>
+        </div>
+        <!-- Classic Brownie Order-->
+        <div
+          id="classic"
+          class="gap-10 w-1/2 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
+        >
+          <div class="relative">
+            <img
+              src="./assets/brownies/pexels-koshkit-887850.jpg"
+              alt="classic-brownie"
+              class="h-[29rem] object-fill w-full"
+            />
+          </div>
+          <div class="flex flex-col justify-between flex-1">
+            <div class="flex flex-col gap-2">
+              <h1 id="item-name" class="font-bold text-2xl">Classic Brownie</h1>
+              <h3 class="font-semibold">Packaging</h3>
+              <!-- Radio Buttons for Pack -->
+              <div class="flex gap-3">
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="pack-of-4-classic"
+                >
+                  <input
+                    type="radio"
+                    id="pack-of-4-classic"
+                    name="packaging-classic"
+                    value="200"
+                    class="hidden"
+                    checked
+                  />
+                  Pack of 4
+                </label>
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="pack-of-6-classic"
+                >
+                  <input
+                    type="radio"
+                    id="pack-of-6-classic"
+                    name="packaging-classic"
+                    value="300"
+                    class="hidden"
+                  />
+                  Pack of 6
+                </label>
+              </div>
+              <h3 class="font-semibold">Varieties</h3>
+              <!-- Radio Buttons for Egg -->
+              <div class="flex gap-3">
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="eggs-classic"
+                >
+                  <input
+                    type="radio"
+                    id="eggs-classic"
+                    name="varieties-classic"
+                    value="0"
+                    class="hidden"
+                    checked
+                  />
+                  With Eggs
+                </label>
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="eggless-classic"
+                >
+                  <input
+                    type="radio"
+                    id="eggless-classic"
+                    name="varieties-classic"
+                    value="30"
+                    class="hidden"
+                  />
+                  Eggless
+                </label>
+              </div>
+
+              <h2 class="font-semibold">Name</h2>
+              <input id="name" type="text" class="bg-transparent border py-2" />
+              <h2 class="font-semibold">Contact Number</h2>
+              <input
+                type="text"
+                name="contact"
+                id="contact"
+                class="bg-transparent border py-2"
+              />
+              <h3 class="flex gap-3 items-center">
+                <span class="text-4xl">₹</span>
+                <span class="text-4xl font-extrabold" id="pricing"></span>
+              </h3>
+            </div>
+            <button
+              id="order"
+              class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
+            >
+              Order
+            </button>
+          </div>
+        </div>
+        <!-- Roasted Nuts Brownie Order -->
+        <div
+          id="roasted"
+          class="gap-10 w-1/2 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
+        >
+          <div class="relative">
+            <img
+              src="./assets/brownies/pexels-karolina-grabowska-5386665.jpg"
+              alt="classic-brownie"
+              class="h-[29rem] object-fill w-full"
+            />
+          </div>
+          <div class="flex flex-col justify-between flex-1">
+            <div class="flex flex-col gap-2">
+              <h1 id="item-name" class="font-bold text-2xl">
+                Roasted Nuts Brownie
+              </h1>
+              <h3 class="font-semibold">Packaging</h3>
+              <!-- Radio Buttons for Pack -->
+              <div class="flex gap-3">
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="pack-of-4-roasted"
+                >
+                  <input
+                    type="radio"
+                    id="pack-of-4-roasted"
+                    name="packaging-roasted"
+                    value="400"
+                    class="hidden"
+                    checked
+                  />
+                  Pack of 4
+                </label>
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="pack-of-6-roasted"
+                >
+                  <input
+                    type="radio"
+                    id="pack-of-6-roasted"
+                    name="packaging-roasted"
+                    value="600"
+                    class="hidden"
+                  />
+                  Pack of 6
+                </label>
+              </div>
+              <h3 class="font-semibold">Varieties</h3>
+              <!-- Radio Buttons for Egg -->
+              <div class="flex gap-3">
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="eggs-roasted"
+                >
+                  <input
+                    type="radio"
+                    id="eggs-roasted"
+                    name="varieties-roasted"
+                    value="0"
+                    class="hidden"
+                    checked
+                  />
+                  With Eggs
+                </label>
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="eggless-roasted"
+                >
+                  <input
+                    type="radio"
+                    id="eggless-roasted"
+                    name="varieties-roasted"
+                    value="30"
+                    class="hidden"
+                  />
+                  Eggless
+                </label>
+              </div>
+
+              <h2 class="font-semibold">Name</h2>
+              <input id="name" type="text" class="bg-transparent border py-2" />
+              <h2 class="font-semibold">Contact Number</h2>
+              <input
+                type="text"
+                name="contact"
+                id="contact"
+                class="bg-transparent border py-2"
+              />
+              <h3 class="flex gap-3 items-center">
+                <span class="text-4xl">₹</span>
+                <span class="text-4xl font-extrabold" id="pricing"></span>
+              </h3>
+            </div>
+            <button
+              id="order"
+              class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
+            >
+              Order
+            </button>
+          </div>
+        </div>
+        <!-- Bliss Box Order-->
+        <div
+          id="bliss"
+          class="gap-10 w-1/2 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
+        >
+          <div class="relative">
+            <img
+              src="./assets/brownies/pexels-withoguz-25639472.jpg"
+              alt="classic-brownie"
+              class="h-[29rem] object-fill w-full"
+            />
+          </div>
+          <div class="flex flex-col justify-between flex-1">
+            <div class="flex flex-col gap-2">
+              <h1 id="item-name" class="font-bold text-2xl">Bliss Box</h1>
+              <h3 class="font-semibold">Packaging</h3>
+              <!-- Radio Buttons for Pack -->
+              <div class="flex gap-3">
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="pack-of-4-bliss"
+                >
+                  <input
+                    type="radio"
+                    id="pack-of-4-bliss"
+                    name="packaging-bliss"
+                    value="500"
+                    class="hidden"
+                    checked
+                  />
+                  1/2 kg
+                </label>
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="pack-of-6-bliss"
+                >
+                  <input
+                    type="radio"
+                    id="pack-of-6-bliss"
+                    name="packaging-bliss"
+                    value="1000"
+                    class="hidden"
+                  />
+                  1 kg
+                </label>
+              </div>
+              <h3 class="font-semibold">Varieties</h3>
+              <!-- Radio Buttons for Egg -->
+              <div class="flex gap-3">
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="eggs-bliss"
+                >
+                  <input
+                    type="radio"
+                    id="eggs-bliss"
+                    name="varieties-bliss"
+                    value="0"
+                    class="hidden"
+                    checked
+                  />
+                  With Eggs
+                </label>
+                <label
+                  class="border px-5 py-2 cursor-pointer flex-1"
+                  for="eggless-bliss"
+                >
+                  <input
+                    type="radio"
+                    id="eggless-bliss"
+                    name="varieties-bliss"
+                    value="30"
+                    class="hidden"
+                  />
+                  Eggless
+                </label>
+              </div>
+
+              <h2 class="font-semibold">Name</h2>
+              <input id="name" type="text" class="bg-transparent border py-2" />
+              <h2 class="font-semibold">Contact Number</h2>
+              <input
+                type="text"
+                name="contact"
+                id="contact"
+                class="bg-transparent border py-2"
+              />
+              <h3 class="flex gap-3 items-center">
+                <span class="text-4xl">₹</span>
+                <span class="text-4xl font-extrabold" id="pricing"></span>
+              </h3>
+            </div>
+            <button
+              id="order"
+              class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
+            >
+              Order
+            </button>
+          </div>
+        </div>
+        <a href="index.html" id="back" class="hidden z-50 mb-14"
+          ><button class="bg-amber-500 px-10 py-2 font-bold rounded-full">
+            <img src="./assets/icons8-back-24.png" alt="back" /></button
+        ></a>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="./scripts/booking.js"></script>
+  </body>
+</html>
