@@ -78,7 +78,7 @@ function calculatePrice(clickedItem) {
   const order = clickedItem.querySelector("#order");
 
   order.addEventListener("click", () => {
-    handleOrder(clickedItem, package, variety);
+    handleOrder(clickedItem, package, variety, finalPricing);
   });
 }
 
@@ -132,17 +132,57 @@ function handleSelectionChange(clickedItem) {
     });
   });
 }
+function isValidate(
+  name,
+  nameElement,
+  nameRequired,
+  contact,
+  contactElement,
+  contactRequired
+) {
+  let validationResult = true;
+  if (name.trim() === "") {
+    nameRequired.classList.remove("hidden");
+    nameElement.focus();
+    validationResult = false;
+  } else {
+    nameRequired.classList.add("hidden");
+  }
+  if (contact.trim() === "" || contact.length !== 10) {
+    contactRequired.classList.remove("hidden");
+    contactElement.focus();
+    validationResult = false;
+  } else {
+    contactRequired.classList.add("hidden");
+  }
+  return validationResult;
+}
 
-function handleOrder(clickedItem, package, variety) {
+function handleOrder(clickedItem, package, variety, finalPricing) {
   const itemElement = clickedItem.querySelector("#item-name");
   const brownie = itemElement.innerHTML;
   const nameElement = clickedItem.querySelector("#name");
   const contactElement = clickedItem.querySelector("#contact");
+  const nameRequired = clickedItem.querySelector("#name-required");
+  const contactRequired = clickedItem.querySelector("#contact-required");
   const name = nameElement.value;
   const contact = contactElement.value;
-  console.log(brownie);
-  console.log(package.id);
-  console.log(variety.id);
-  console.log(name);
-  console.log(contact);
+  const validateResult = isValidate(
+    name,
+    nameElement,
+    nameRequired,
+    contact,
+    contactElement,
+    contactRequired
+  );
+  if (!validateResult) {
+    return;
+  } else {
+    console.log(brownie);
+    console.log(package.id);
+    console.log(variety.id);
+    console.log(name);
+    console.log(contact);
+    console.log(finalPricing);
+  }
 }
