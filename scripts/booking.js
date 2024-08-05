@@ -2,7 +2,9 @@ const containers = document.querySelectorAll(".div");
 const backdrop = document.getElementById("backdrop");
 const title = document.getElementById("title");
 const homeButton = document.getElementById("back");
-
+let clickedItem;
+let finalPricing = 0;
+let package, variety;
 // Adding event listener for each item
 containers.forEach((item) => {
   item.addEventListener("click", () => {
@@ -11,7 +13,7 @@ containers.forEach((item) => {
     backdrop.classList.remove("hidden");
     title.classList.add("hidden");
     // Create order pop up of the clicked item to animate
-    let clickedItem;
+
     if (item.classList.contains("white"))
       clickedItem = document.getElementById("white");
     if (item.classList.contains("classic"))
@@ -25,6 +27,10 @@ containers.forEach((item) => {
     clickedItem.classList.add("pop-in", "fixed", "flex");
     backdrop.appendChild(clickedItem);
     calculatePrice(clickedItem);
+    const order = clickedItem.querySelector("#order");
+    order.addEventListener("click", () => {
+      handleOrder(clickedItem, package, variety, finalPricing);
+    });
     backdrop.classList.add("flex");
     homeButton.classList.remove("hidden");
     homeButton.classList.add("flex");
@@ -34,8 +40,7 @@ containers.forEach((item) => {
 // calculating and displaying final price
 function calculatePrice(clickedItem) {
   const pricing = document.getElementById("pricing");
-  let finalPricing = 0;
-  let package, variety;
+
   if (clickedItem.id === "white") {
     package = clickedItem.querySelector(
       `input[name="packaging-white"]:checked`
@@ -71,15 +76,9 @@ function calculatePrice(clickedItem) {
       `input[name="varieties-bliss"]:checked`
     );
     finalPricing = +package.value + +variety.value;
-    console.log(finalPricing);
     pricing.innerHTML = finalPricing;
   }
   handleSelectionChange(clickedItem);
-  const order = clickedItem.querySelector("#order");
-
-  order.addEventListener("click", () => {
-    handleOrder(clickedItem, package, variety, finalPricing);
-  });
 }
 
 // function to add event listeners
@@ -160,7 +159,7 @@ function isValidate(
 
 function handleOrder(clickedItem, package, variety, finalPricing) {
   const itemElement = clickedItem.querySelector("#item-name");
-  const brownie = itemElement.innerHTML;
+  const brownie = itemElement.innerHTML.trim();
   const nameElement = clickedItem.querySelector("#name");
   const contactElement = clickedItem.querySelector("#contact");
   const nameRequired = clickedItem.querySelector("#name-required");
@@ -178,11 +177,41 @@ function handleOrder(clickedItem, package, variety, finalPricing) {
   if (!validateResult) {
     return;
   } else {
-    console.log(brownie);
-    console.log(package.id);
-    console.log(variety.id);
-    console.log(name);
-    console.log(contact);
-    console.log(finalPricing);
+    const data = {
+      service_id: "service_b15bzmp",
+      template_id: "template_ngmu1cg",
+      user_id: "s5XZ01aMNP0iKSI17",
+      template_params: {
+        item_name: brownie,
+        packaging: package.id,
+        variety: variety.id,
+        price: finalPricing,
+        from_name: name,
+        contact_number: contact,
+      },
+    };
+    console.log(data);
+
+    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((result) => {
+        console.log("Success:", result);
+        alert("User data submitted successfully!");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Error submitting user data.");
+      });
   }
 }
