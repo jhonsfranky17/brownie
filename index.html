@@ -83,7 +83,7 @@
   </head>
   <body>
     <!-- Wrapper -->
-    <div class="h-dvh w-full relative overflow-hidden">
+    <div class="min-h-dvh w-full relative overflow-hidden">
       <video
         class="absolute top-0 left-0 w-full h-full object-cover brightness-50"
         autoplay
@@ -96,7 +96,7 @@
       </video>
       <!-- Hero -->
       <div
-        class="relative z-10 flex flex-col text-white justify-center items-center h-full"
+        class="relative z-10 flex flex-col text-white justify-center items-center h-dvh"
       >
         <!-- Backdrop -->
         <div
@@ -153,13 +153,13 @@
                 <img
                   src="./assets/brownies/pexels-chudesabyvaut-1351350-2864545.jpg"
                   alt=""
-                  class="h-[29rem] object-fill w-full"
+                  class="2xl:h-[29rem] xl:h-[25rem] object-cover w-full"
                 />
                 <div
-                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between gap-5 p-10 font-medium"
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between 2xl:p-10 xl:p-5 font-medium"
                 >
                   <span
-                    class="font-redhat text-white text-lg opacity-0 group-hover:opacity-100 duration-1000"
+                    class="font-redhat text-white 2xl:text-lg xl:text-sm opacity-0 group-hover:opacity-100 duration-1000"
                     >Our White Chocolate Brownie is a delightful twist on the
                     classic treat! This brownie combines the creamy sweetness of
                     white chocolate with a soft, melt-in-your-mouth texture.
@@ -184,13 +184,13 @@
                 <img
                   src="./assets/brownies/pexels-koshkit-887850.jpg"
                   alt=""
-                  class="h-[29rem] object-fill w-full"
+                  class="2xl:h-[29rem] xl:h-[25rem] object-cover w-full"
                 />
                 <div
-                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between gap-5 p-10 font-medium"
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between 2xl:p-10 xl:p-5 font-medium"
                 >
                   <span
-                    class="font-redhat text-white text-lg opacity-0 group-hover:opacity-100 duration-1000"
+                    class="font-redhat text-white 2xl:text-lg xl:text-sm opacity-0 group-hover:opacity-100 duration-1000"
                     >Our Classic Brownie is the heart of our collection,
                     featuring a timeless recipe that delivers a perfectly fudgy
                     texture and deep chocolate flavor. It's the ultimate treat
@@ -212,19 +212,18 @@
                 <img
                   src="./assets/brownies/pexels-karolina-grabowska-5386665.jpg"
                   alt=""
-                  class="h-[29rem] object-fill w-full"
+                  class="2xl:h-[29rem] xl:h-[25rem] object-cover w-full"
                 />
                 <div
-                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between gap-5 p-10 font-medium"
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between 2xl:p-10 xl:p-5 font-medium"
                 >
                   <span
-                    class="font-redhat text-white text-lg opacity-0 group-hover:opacity-100 duration-1000"
+                    class="font-redhat text-white 2xl:text-lg xl:text-sm opacity-0 group-hover:opacity-100 duration-1000"
                     >Experience the perfect blend of crunch and chocolate with
                     our Roasted Nuts Brownie. This brownie features a rich,
                     fudgy base infused with a generous mix of roasted nuts,
-                    adding a delightful crunch and a nutty depth of flavor. It's
-                    the perfect choice for those who crave a little extra
-                    texture and taste in their brownies!</span
+                    adding a delightful crunch and a nutty depth of
+                    flavor.</span
                   >
                   <button
                     class="font-redhat font-bold opacity-0 bg-amber-500 hover:bg-amber-600 px-5 py-2 group-hover:opacity-100 duration-1000"
@@ -243,13 +242,13 @@
                 <img
                   src="./assets/brownies/pexels-withoguz-25639472.jpg"
                   alt=""
-                  class="h-[29rem] object-fill w-full"
+                  class="2xl:h-[29rem] xl:h-[25rem] object-cover w-full"
                 />
                 <div
-                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between gap-5 p-10 font-medium"
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between 2xl:p-10 xl:p-5 font-medium"
                 >
                   <span
-                    class="font-redhat text-white text-lg opacity-0 group-hover:opacity-100 duration-1000"
+                    class="font-redhat text-white 2xl:text-lg xl:text-sm opacity-0 group-hover:opacity-100 duration-1000"
                     >Our specially curated Bliss Box is perfect for any
                     occasion, offering an assortment of our finest brownies,
                     including the Classic Brownie, White Chocolate Brownie, and
@@ -282,7 +281,7 @@
         <!-- White Brownie Order -->
         <div
           id="white"
-          class="gap-10 w-1/2 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
+          class="gap-10 2xl:w-1/2 xl:w-3/4 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
         >
           <div class="relative">
             <img
@@ -395,7 +394,7 @@
         <!-- Classic Brownie Order-->
         <div
           id="classic"
-          class="gap-10 w-1/2 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
+          class="gap-10 2xl:w-1/2 xl:w-3/4 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
         >
           <div class="relative">
             <img
@@ -504,7 +503,7 @@
         <!-- Roasted Nuts Brownie Order -->
         <div
           id="roasted"
-          class="gap-10 w-1/2 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
+          class="gap-10 2xl:w-1/2 xl:w-3/4 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
         >
           <div class="relative">
             <img
@@ -615,7 +614,7 @@
         <!-- Bliss Box Order-->
         <div
           id="bliss"
-          class="gap-10 w-1/2 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
+          class="gap-10 2xl:w-1/2 xl:w-3/4 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
         >
           <div class="relative">
             <img
@@ -652,7 +651,7 @@
                     type="radio"
                     id="pack-of-6-bliss"
                     name="packaging-bliss"
-                    value="1000"
+                    value="900"
                     class="hidden"
                   />
                   1 kg
