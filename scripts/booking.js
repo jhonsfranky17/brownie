@@ -213,12 +213,12 @@ async function handleOrder(clickedItem, package, variety, finalPricing) {
       clickedItem.classList.remove("pop-in", "fixed", "flex");
       clickedItem.classList.add("hidden");
       success.classList.remove("hidden");
-      success.classList.add("flex");
+      success.classList.add("flex", "pop-in");
     } catch (error) {
       clickedItem.classList.remove("pop-in", "fixed", "flex");
       clickedItem.classList.add("hidden");
       failure.classList.remove("hidden");
-      failure.classList.add("flex");
+      failure.classList.add("flex", "pop-in");
     }
   }
 }
