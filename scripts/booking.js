@@ -1,6 +1,7 @@
 const containers = document.querySelectorAll(".div");
 const backdrop = document.getElementById("backdrop");
 const title = document.getElementById("title");
+const address = document.getElementById("address");
 const homeButton = document.getElementById("back");
 const success = document.getElementById("success-banner");
 const failure = document.getElementById("error-banner");
@@ -14,6 +15,7 @@ containers.forEach((item) => {
     containers.forEach((div) => div.classList.add("hidden"));
     backdrop.classList.remove("hidden");
     title.classList.add("hidden");
+    address.classList.add("hidden");
     // Create order pop up of the clicked item to animate
 
     if (item.classList.contains("white"))
