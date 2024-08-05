@@ -2,6 +2,8 @@ const containers = document.querySelectorAll(".div");
 const backdrop = document.getElementById("backdrop");
 const title = document.getElementById("title");
 const homeButton = document.getElementById("back");
+const success = document.getElementById("success-banner");
+const failure = document.getElementById("error-banner");
 let clickedItem;
 let finalPricing = 0;
 let package, variety;
@@ -157,7 +159,7 @@ function isValidate(
   return validationResult;
 }
 
-function handleOrder(clickedItem, package, variety, finalPricing) {
+async function handleOrder(clickedItem, package, variety, finalPricing) {
   const itemElement = clickedItem.querySelector("#item-name");
   const brownie = itemElement.innerHTML.trim();
   const nameElement = clickedItem.querySelector("#name");
@@ -177,6 +179,7 @@ function handleOrder(clickedItem, package, variety, finalPricing) {
   if (!validateResult) {
     return;
   } else {
+    // data for API call
     const data = {
       service_id: "service_b15bzmp",
       template_id: "template_ngmu1cg",
@@ -190,28 +193,32 @@ function handleOrder(clickedItem, package, variety, finalPricing) {
         contact_number: contact,
       },
     };
-    console.log(data);
 
-    fetch("https://api.emailjs.com/api/v1.0/email/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+    // API call
+
+    try {
+      const response = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
         }
-        return response.json();
-      })
-      .then((result) => {
-        console.log("Success:", result);
-        alert("User data submitted successfully!");
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("Error submitting user data.");
-      });
+      );
+      if (!response.ok) {
+        throw new Error("Order failed!");
+      }
+      clickedItem.classList.remove("pop-in", "fixed", "flex");
+      clickedItem.classList.add("hidden");
+      success.classList.remove("hidden");
+      success.classList.add("flex");
+    } catch (error) {
+      clickedItem.classList.remove("pop-in", "fixed", "flex");
+      clickedItem.classList.add("hidden");
+      failure.classList.remove("hidden");
+      failure.classList.add("flex");
+    }
   }
 }
