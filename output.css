@@ -1027,3 +1027,22 @@ video {
     line-height: 1.75rem;
   }
 }
+@media (min-width: 1800px) {
+
+  .min-\[1800px\]\:h-\[29rem\] {
+    height: 29rem;
+  }
+
+  .min-\[1800px\]\:gap-20 {
+    gap: 5rem;
+  }
+
+  .min-\[1800px\]\:p-10 {
+    padding: 2.5rem;
+  }
+
+  .min-\[1800px\]\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
