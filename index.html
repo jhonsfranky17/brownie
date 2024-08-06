@@ -148,20 +148,22 @@
           Heavenly Bites
         </nav>
         <div
-          class="w-full h-full flex flex-col xl:justify-evenly items-center 2xl:gap-20 gap-10"
+          class="w-full h-full flex flex-col xl:justify-evenly items-center 2xl:gap-20 gap-10 xl:px-0 px-10"
         >
           <h1
             id="title"
-            class="font-redhat font-bold xl:px-10 xl:py-5 py-3 px-3 bg-amber-500"
+            class="font-redhat font-bold xl:px-10 xl:py-5 text-center py-2 bg-amber-500"
           >
             Indulge in Our Signature Home-made Brownies
           </h1>
           <div
-            class="grid xl:grid-cols-4 grid-cols-1 gap-10 2xl:w-3/4 2xl:px-0 px-10"
+            class="grid xl:grid-cols-4 grid-cols-1 gap-10 2xl:w-3/4 2xl:px-0 xl:px-10"
           >
             <!-- White Brownie -->
             <div class="flex flex-col gap-2 slide-in-left div white">
-              <div class="relative group">
+              <div
+                class="relative group justify-end items-center flex flex-col"
+              >
                 <img
                   src="./assets/brownies/pexels-chudesabyvaut-1351350-2864545.jpg"
                   alt=""
@@ -185,6 +187,11 @@
                     Order Now
                   </button>
                 </div>
+                <button
+                  class="sm:hidden mb-3 absolute z-50 font-redhat font-bold bg-amber-500 hover:bg-amber-600 px-5 py-2"
+                >
+                  Order Now
+                </button>
               </div>
               <h4 class="font-redhat text-center font-bold">
                 White Chocolate Brownie
@@ -192,7 +199,9 @@
             </div>
             <!-- Classic Brownie -->
             <div class="flex flex-col gap-2 slide-in-left div classic">
-              <div class="relative group">
+              <div
+                class="relative group justify-end items-center flex flex-col"
+              >
                 <img
                   src="./assets/brownies/pexels-koshkit-887850.jpg"
                   alt=""
@@ -215,12 +224,19 @@
                     Order Now
                   </button>
                 </div>
+                <button
+                  class="sm:hidden mb-3 absolute z-50 font-redhat font-bold bg-amber-500 hover:bg-amber-600 px-5 py-2"
+                >
+                  Order Now
+                </button>
               </div>
               <h4 class="font-redhat text-center font-bold">Classic Brownie</h4>
             </div>
             <!-- Roasted Nuts Brownie -->
             <div class="flex flex-col gap-2 slide-in-right div roasted">
-              <div class="relative group">
+              <div
+                class="relative group justify-end items-center flex flex-col"
+              >
                 <img
                   src="./assets/brownies/pexels-karolina-grabowska-5386665.jpg"
                   alt=""
@@ -243,6 +259,11 @@
                     Order Now
                   </button>
                 </div>
+                <button
+                  class="sm:hidden mb-3 absolute z-50 font-redhat font-bold bg-amber-500 hover:bg-amber-600 px-5 py-2"
+                >
+                  Order Now
+                </button>
               </div>
               <h4 class="font-redhat text-center font-bold">
                 Roasted Nuts Brownie
@@ -250,7 +271,9 @@
             </div>
             <!-- Bliss Box Brownie -->
             <div class="flex flex-col gap-2 slide-in-right div bliss">
-              <div class="relative group">
+              <div
+                class="relative group justify-end items-center flex flex-col"
+              >
                 <img
                   src="./assets/brownies/pexels-withoguz-25639472.jpg"
                   alt=""
@@ -274,6 +297,11 @@
                     Order Now
                   </button>
                 </div>
+                <button
+                  class="sm:hidden mb-3 absolute z-50 font-redhat font-bold bg-amber-500 hover:bg-amber-600 px-5 py-2"
+                >
+                  Order Now
+                </button>
               </div>
               <h4 class="font-redhat text-center font-bold">Bliss Box</h4>
             </div>
@@ -281,7 +309,7 @@
           <!-- Address -->
           <div
             id="address"
-            class="flex justify-between items-center 2xl:w-3/4 xl:w-full 2xl:px-0 xl:px-10"
+            class="flex xl:flex-row flex-col justify-between items-center 2xl:w-3/4 xl:w-full 2xl:px-0 xl:px-10 xl:gap-0 gap-3"
           >
             <div class="flex gap-1 font-redhat slide-in-left">
               <img src="./assets/icons8-mail-24.png" alt="email" />
@@ -292,447 +320,449 @@
               <h6>+91 9072269490</h6>
             </div>
           </div>
-        </div>
-        <!-- White Brownie Order -->
-        <div
-          id="white"
-          class="gap-10 2xl:w-1/2 xl:w-3/4 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
-        >
-          <div class="relative">
-            <img
-              src="./assets/brownies/pexels-chudesabyvaut-1351350-2864545.jpg"
-              alt="classic-brownie"
-              class="h-[29rem] object-fill w-full"
-            />
-          </div>
-          <div class="flex flex-col justify-between flex-1">
-            <div class="flex flex-col gap-2">
-              <h1 id="item-name" class="font-bold text-2xl">
-                White Chocolate Brownie
-              </h1>
-              <h3 class="font-semibold">Packaging</h3>
-              <!-- Radio Buttons for Pack -->
-              <div class="flex gap-3">
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="pack-of-4-white"
-                >
-                  <input
-                    type="radio"
-                    id="pack-of-4-white"
-                    name="packaging-white"
-                    value="280"
-                    class="hidden"
-                    checked
-                  />
-                  Pack of 4
-                </label>
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="pack-of-6-white"
-                >
-                  <input
-                    type="radio"
-                    id="pack-of-6-white"
-                    name="packaging-white"
-                    value="420"
-                    class="hidden"
-                  />
-                  Pack of 6
-                </label>
-              </div>
-              <h3 class="font-semibold">Varieties</h3>
-              <!-- Radio Buttons for Egg -->
-              <div class="flex gap-3" id="varieties">
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="eggs-white"
-                >
-                  <input
-                    type="radio"
-                    id="eggs-white"
-                    name="varieties-white"
-                    value="0"
-                    class="hidden"
-                    checked
-                  />
-                  With Eggs
-                </label>
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="eggless-white"
-                >
-                  <input
-                    type="radio"
-                    id="eggless-white"
-                    name="varieties-white"
-                    value="30"
-                    class="hidden"
-                  />
-                  Eggless
-                </label>
-              </div>
-              <p id="name-required" class="hidden text-amber-400">
-                Please enter a valid value!
-              </p>
-              <h2 class="font-semibold">Name</h2>
-              <input
-                id="name"
-                type="text"
-                class="bg-transparent border py-2 px-5"
-                required
+          <!-- White Brownie Order -->
+          <div
+            id="white"
+            class="gap-10 2xl:w-1/2 w-3/4 hidden font-redhat bg-yellow-950 xl:p-10 p-5 rounded-3xl"
+          >
+            <div class="hidden md:block">
+              <img
+                src="./assets/brownies/pexels-chudesabyvaut-1351350-2864545.jpg"
+                alt="white-brownie"
+                class="h-[29rem] object-fill w-full"
               />
-              <p id="contact-required" class="hidden text-amber-400">
-                Please enter a valid value!
-              </p>
-              <h2 class="font-semibold">Contact Number</h2>
-              <input
-                type="text"
-                name="contact"
-                id="contact"
-                class="bg-transparent border py-2 px-5"
-                required
-              />
-              <h3 class="flex gap-3 items-center">
-                <span class="text-4xl">₹</span>
-                <span class="text-4xl font-extrabold" id="pricing"></span>
-              </h3>
             </div>
-            <button
-              id="order"
-              class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
-            >
-              Order
-            </button>
-          </div>
-        </div>
-        <!-- Classic Brownie Order-->
-        <div
-          id="classic"
-          class="gap-10 2xl:w-1/2 xl:w-3/4 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
-        >
-          <div class="relative">
-            <img
-              src="./assets/brownies/pexels-koshkit-887850.jpg"
-              alt="classic-brownie"
-              class="h-[29rem] object-fill w-full"
-            />
-          </div>
-          <div class="flex flex-col justify-between flex-1">
-            <div class="flex flex-col gap-2">
-              <h1 id="item-name" class="font-bold text-2xl">Classic Brownie</h1>
-              <h3 class="font-semibold">Packaging</h3>
-              <!-- Radio Buttons for Pack -->
-              <div class="flex gap-3">
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="pack-of-4-classic"
-                >
-                  <input
-                    type="radio"
-                    id="pack-of-4-classic"
-                    name="packaging-classic"
-                    value="200"
-                    class="hidden"
-                    checked
-                  />
-                  Pack of 4
-                </label>
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="pack-of-6-classic"
-                >
-                  <input
-                    type="radio"
-                    id="pack-of-6-classic"
-                    name="packaging-classic"
-                    value="300"
-                    class="hidden"
-                  />
-                  Pack of 6
-                </label>
+            <div class="flex flex-col justify-between flex-1">
+              <div class="flex flex-col gap-2">
+                <h1 id="item-name" class="font-bold text-2xl">
+                  White Chocolate Brownie
+                </h1>
+                <h3 class="font-semibold">Packaging</h3>
+                <!-- Radio Buttons for Pack -->
+                <div class="flex gap-3">
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="pack-of-4-white"
+                  >
+                    <input
+                      type="radio"
+                      id="pack-of-4-white"
+                      name="packaging-white"
+                      value="280"
+                      class="hidden"
+                      checked
+                    />
+                    Pack of 4
+                  </label>
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="pack-of-6-white"
+                  >
+                    <input
+                      type="radio"
+                      id="pack-of-6-white"
+                      name="packaging-white"
+                      value="420"
+                      class="hidden"
+                    />
+                    Pack of 6
+                  </label>
+                </div>
+                <h3 class="font-semibold">Varieties</h3>
+                <!-- Radio Buttons for Egg -->
+                <div class="flex gap-3" id="varieties">
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="eggs-white"
+                  >
+                    <input
+                      type="radio"
+                      id="eggs-white"
+                      name="varieties-white"
+                      value="0"
+                      class="hidden"
+                      checked
+                    />
+                    With Eggs
+                  </label>
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="eggless-white"
+                  >
+                    <input
+                      type="radio"
+                      id="eggless-white"
+                      name="varieties-white"
+                      value="30"
+                      class="hidden"
+                    />
+                    Eggless
+                  </label>
+                </div>
+                <p id="name-required" class="hidden text-amber-400">
+                  Please enter a valid value!
+                </p>
+                <h2 class="font-semibold">Name</h2>
+                <input
+                  id="name"
+                  type="text"
+                  class="bg-transparent border py-2 px-5"
+                  required
+                />
+                <p id="contact-required" class="hidden text-amber-400">
+                  Please enter a valid value!
+                </p>
+                <h2 class="font-semibold">Contact Number</h2>
+                <input
+                  type="text"
+                  name="contact"
+                  id="contact"
+                  class="bg-transparent border py-2 px-5"
+                  required
+                />
+                <h3 class="flex gap-3 items-center">
+                  <span class="text-4xl">₹</span>
+                  <span class="text-4xl font-extrabold" id="pricing"></span>
+                </h3>
               </div>
-              <h3 class="font-semibold">Varieties</h3>
-              <!-- Radio Buttons for Egg -->
-              <div class="flex gap-3">
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="eggs-classic"
-                >
-                  <input
-                    type="radio"
-                    id="eggs-classic"
-                    name="varieties-classic"
-                    value="0"
-                    class="hidden"
-                    checked
-                  />
-                  With Eggs
-                </label>
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="eggless-classic"
-                >
-                  <input
-                    type="radio"
-                    id="eggless-classic"
-                    name="varieties-classic"
-                    value="30"
-                    class="hidden"
-                  />
-                  Eggless
-                </label>
-              </div>
-              <p id="name-required" class="hidden text-amber-400">
-                Please enter a valid value!
-              </p>
-              <h2 class="font-semibold">Name</h2>
-              <input
-                id="name"
-                type="text"
-                class="bg-transparent border py-2 px-5"
-              />
-              <p id="contact-required" class="hidden text-amber-400">
-                Please enter a valid value!
-              </p>
-              <h2 class="font-semibold">Contact Number</h2>
-              <input
-                type="text"
-                name="contact"
-                id="contact"
-                class="bg-transparent border py-2 px-5"
-              />
-              <h3 class="flex gap-3 items-center">
-                <span class="text-4xl">₹</span>
-                <span class="text-4xl font-extrabold" id="pricing"></span>
-              </h3>
+              <button
+                id="order"
+                class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
+              >
+                Order
+              </button>
             </div>
-            <button
-              id="order"
-              class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
-            >
-              Order
-            </button>
           </div>
-        </div>
-        <!-- Roasted Nuts Brownie Order -->
-        <div
-          id="roasted"
-          class="gap-10 2xl:w-1/2 xl:w-3/4 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
-        >
-          <div class="relative">
-            <img
-              src="./assets/brownies/pexels-karolina-grabowska-5386665.jpg"
-              alt="classic-brownie"
-              class="h-[29rem] object-fill w-full"
-            />
-          </div>
-          <div class="flex flex-col justify-between flex-1">
-            <div class="flex flex-col gap-2">
-              <h1 id="item-name" class="font-bold text-2xl">
-                Roasted Nuts Brownie
-              </h1>
-              <h3 class="font-semibold">Packaging</h3>
-              <!-- Radio Buttons for Pack -->
-              <div class="flex gap-3">
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="pack-of-4-roasted"
-                >
-                  <input
-                    type="radio"
-                    id="pack-of-4-roasted"
-                    name="packaging-roasted"
-                    value="400"
-                    class="hidden"
-                    checked
-                  />
-                  Pack of 4
-                </label>
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="pack-of-6-roasted"
-                >
-                  <input
-                    type="radio"
-                    id="pack-of-6-roasted"
-                    name="packaging-roasted"
-                    value="600"
-                    class="hidden"
-                  />
-                  Pack of 6
-                </label>
-              </div>
-              <h3 class="font-semibold">Varieties</h3>
-              <!-- Radio Buttons for Egg -->
-              <div class="flex gap-3">
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="eggs-roasted"
-                >
-                  <input
-                    type="radio"
-                    id="eggs-roasted"
-                    name="varieties-roasted"
-                    value="0"
-                    class="hidden"
-                    checked
-                  />
-                  With Eggs
-                </label>
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="eggless-roasted"
-                >
-                  <input
-                    type="radio"
-                    id="eggless-roasted"
-                    name="varieties-roasted"
-                    value="30"
-                    class="hidden"
-                  />
-                  Eggless
-                </label>
-              </div>
-              <p id="name-required" class="hidden text-amber-400">
-                Please enter a valid value!
-              </p>
-              <h2 class="font-semibold">Name</h2>
-              <input
-                id="name"
-                type="text"
-                class="bg-transparent border py-2 px-5"
+          <!-- Classic Brownie Order-->
+          <div
+            id="classic"
+            class="gap-10 2xl:w-1/2 w-3/4 hidden font-redhat bg-yellow-950 xl:p-10 p-5 rounded-3xl"
+          >
+            <div class="hidden md:block">
+              <img
+                src="./assets/brownies/pexels-koshkit-887850.jpg"
+                alt="classic-brownie"
+                class="h-[29rem] object-fill w-full"
               />
-              <p id="contact-required" class="hidden text-amber-400">
-                Please enter a valid value!
-              </p>
-              <h2 class="font-semibold">Contact Number</h2>
-              <input
-                type="text"
-                name="contact"
-                id="contact"
-                class="bg-transparent border py-2 px-5"
-              />
-              <h3 class="flex gap-3 items-center">
-                <span class="text-4xl">₹</span>
-                <span class="text-4xl font-extrabold" id="pricing"></span>
-              </h3>
             </div>
-            <button
-              id="order"
-              class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
-            >
-              Order
-            </button>
-          </div>
-        </div>
-        <!-- Bliss Box Order-->
-        <div
-          id="bliss"
-          class="gap-10 2xl:w-1/2 xl:w-3/4 hidden font-redhat bg-yellow-950 p-10 rounded-3xl"
-        >
-          <div class="relative">
-            <img
-              src="./assets/brownies/pexels-withoguz-25639472.jpg"
-              alt="classic-brownie"
-              class="h-[29rem] object-fill w-full"
-            />
-          </div>
-          <div class="flex flex-col justify-between flex-1">
-            <div class="flex flex-col gap-2">
-              <h1 id="item-name" class="font-bold text-2xl">Bliss Box</h1>
-              <h3 class="font-semibold">Packaging</h3>
-              <!-- Radio Buttons for Pack -->
-              <div class="flex gap-3">
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="pack-of-4-bliss"
-                >
-                  <input
-                    type="radio"
-                    id="pack-of-4-bliss"
-                    name="packaging-bliss"
-                    value="500"
-                    class="hidden"
-                    checked
-                  />
-                  1/2 kg
-                </label>
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="pack-of-6-bliss"
-                >
-                  <input
-                    type="radio"
-                    id="pack-of-6-bliss"
-                    name="packaging-bliss"
-                    value="900"
-                    class="hidden"
-                  />
-                  1 kg
-                </label>
+            <div class="flex flex-col justify-between flex-1">
+              <div class="flex flex-col gap-2">
+                <h1 id="item-name" class="font-bold text-2xl">
+                  Classic Brownie
+                </h1>
+                <h3 class="font-semibold">Packaging</h3>
+                <!-- Radio Buttons for Pack -->
+                <div class="flex gap-3">
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="pack-of-4-classic"
+                  >
+                    <input
+                      type="radio"
+                      id="pack-of-4-classic"
+                      name="packaging-classic"
+                      value="200"
+                      class="hidden"
+                      checked
+                    />
+                    Pack of 4
+                  </label>
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="pack-of-6-classic"
+                  >
+                    <input
+                      type="radio"
+                      id="pack-of-6-classic"
+                      name="packaging-classic"
+                      value="300"
+                      class="hidden"
+                    />
+                    Pack of 6
+                  </label>
+                </div>
+                <h3 class="font-semibold">Varieties</h3>
+                <!-- Radio Buttons for Egg -->
+                <div class="flex gap-3">
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="eggs-classic"
+                  >
+                    <input
+                      type="radio"
+                      id="eggs-classic"
+                      name="varieties-classic"
+                      value="0"
+                      class="hidden"
+                      checked
+                    />
+                    With Eggs
+                  </label>
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="eggless-classic"
+                  >
+                    <input
+                      type="radio"
+                      id="eggless-classic"
+                      name="varieties-classic"
+                      value="30"
+                      class="hidden"
+                    />
+                    Eggless
+                  </label>
+                </div>
+                <p id="name-required" class="hidden text-amber-400">
+                  Please enter a valid value!
+                </p>
+                <h2 class="font-semibold">Name</h2>
+                <input
+                  id="name"
+                  type="text"
+                  class="bg-transparent border py-2 px-5"
+                />
+                <p id="contact-required" class="hidden text-amber-400">
+                  Please enter a valid value!
+                </p>
+                <h2 class="font-semibold">Contact Number</h2>
+                <input
+                  type="text"
+                  name="contact"
+                  id="contact"
+                  class="bg-transparent border py-2 px-5"
+                />
+                <h3 class="flex gap-3 items-center">
+                  <span class="text-4xl">₹</span>
+                  <span class="text-4xl font-extrabold" id="pricing"></span>
+                </h3>
               </div>
-              <h3 class="font-semibold">Varieties</h3>
-              <!-- Radio Buttons for Egg -->
-              <div class="flex gap-3">
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="eggs-bliss"
-                >
-                  <input
-                    type="radio"
-                    id="eggs-bliss"
-                    name="varieties-bliss"
-                    value="0"
-                    class="hidden"
-                    checked
-                  />
-                  With Eggs
-                </label>
-                <label
-                  class="border px-5 py-2 cursor-pointer flex-1"
-                  for="eggless-bliss"
-                >
-                  <input
-                    type="radio"
-                    id="eggless-bliss"
-                    name="varieties-bliss"
-                    value="30"
-                    class="hidden"
-                  />
-                  Eggless
-                </label>
-              </div>
-              <p id="name-required" class="hidden text-amber-400">
-                Please enter a valid value!
-              </p>
-              <h2 class="font-semibold">Name</h2>
-              <input
-                id="name"
-                type="text"
-                class="bg-transparent border py-2 px-5"
-              />
-              <p id="contact-required" class="hidden text-amber-400">
-                Please enter a valid value!
-              </p>
-              <h2 class="font-semibold">Contact Number</h2>
-              <input
-                type="text"
-                name="contact"
-                id="contact"
-                class="bg-transparent border py-2 px-5"
-              />
-              <h3 class="flex gap-3 items-center">
-                <span class="text-4xl">₹</span>
-                <span class="text-4xl font-extrabold" id="pricing"></span>
-              </h3>
+              <button
+                id="order"
+                class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
+              >
+                Order
+              </button>
             </div>
-            <button
-              id="order"
-              class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
-            >
-              Order
-            </button>
+          </div>
+          <!-- Roasted Nuts Brownie Order -->
+          <div
+            id="roasted"
+            class="gap-10 2xl:w-1/2 w-3/4 hidden font-redhat bg-yellow-950 xl:p-10 p-5 rounded-3xl"
+          >
+            <div class="hidden md:block">
+              <img
+                src="./assets/brownies/pexels-karolina-grabowska-5386665.jpg"
+                alt="roasted-brownie"
+                class="h-[29rem] object-fill w-full"
+              />
+            </div>
+            <div class="flex flex-col justify-between flex-1">
+              <div class="flex flex-col gap-2">
+                <h1 id="item-name" class="font-bold text-2xl">
+                  Roasted Nuts Brownie
+                </h1>
+                <h3 class="font-semibold">Packaging</h3>
+                <!-- Radio Buttons for Pack -->
+                <div class="flex gap-3">
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="pack-of-4-roasted"
+                  >
+                    <input
+                      type="radio"
+                      id="pack-of-4-roasted"
+                      name="packaging-roasted"
+                      value="400"
+                      class="hidden"
+                      checked
+                    />
+                    Pack of 4
+                  </label>
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="pack-of-6-roasted"
+                  >
+                    <input
+                      type="radio"
+                      id="pack-of-6-roasted"
+                      name="packaging-roasted"
+                      value="600"
+                      class="hidden"
+                    />
+                    Pack of 6
+                  </label>
+                </div>
+                <h3 class="font-semibold">Varieties</h3>
+                <!-- Radio Buttons for Egg -->
+                <div class="flex gap-3">
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="eggs-roasted"
+                  >
+                    <input
+                      type="radio"
+                      id="eggs-roasted"
+                      name="varieties-roasted"
+                      value="0"
+                      class="hidden"
+                      checked
+                    />
+                    With Eggs
+                  </label>
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="eggless-roasted"
+                  >
+                    <input
+                      type="radio"
+                      id="eggless-roasted"
+                      name="varieties-roasted"
+                      value="30"
+                      class="hidden"
+                    />
+                    Eggless
+                  </label>
+                </div>
+                <p id="name-required" class="hidden text-amber-400">
+                  Please enter a valid value!
+                </p>
+                <h2 class="font-semibold">Name</h2>
+                <input
+                  id="name"
+                  type="text"
+                  class="bg-transparent border py-2 px-5"
+                />
+                <p id="contact-required" class="hidden text-amber-400">
+                  Please enter a valid value!
+                </p>
+                <h2 class="font-semibold">Contact Number</h2>
+                <input
+                  type="text"
+                  name="contact"
+                  id="contact"
+                  class="bg-transparent border py-2 px-5"
+                />
+                <h3 class="flex gap-3 items-center">
+                  <span class="text-4xl">₹</span>
+                  <span class="text-4xl font-extrabold" id="pricing"></span>
+                </h3>
+              </div>
+              <button
+                id="order"
+                class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
+              >
+                Order
+              </button>
+            </div>
+          </div>
+          <!-- Bliss Box Order-->
+          <div
+            id="bliss"
+            class="gap-10 2xl:w-1/2 w-3/4 hidden font-redhat bg-yellow-950 xl:p-10 p-5 rounded-3xl"
+          >
+            <div class="hidden md:block">
+              <img
+                src="./assets/brownies/pexels-withoguz-25639472.jpg"
+                alt="bliss-brownie"
+                class="h-[29rem] object-fill w-full"
+              />
+            </div>
+            <div class="flex flex-col justify-between flex-1">
+              <div class="flex flex-col gap-2">
+                <h1 id="item-name" class="font-bold text-2xl">Bliss Box</h1>
+                <h3 class="font-semibold">Packaging</h3>
+                <!-- Radio Buttons for Pack -->
+                <div class="flex gap-3">
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="pack-of-4-bliss"
+                  >
+                    <input
+                      type="radio"
+                      id="pack-of-4-bliss"
+                      name="packaging-bliss"
+                      value="500"
+                      class="hidden"
+                      checked
+                    />
+                    1/2 kg
+                  </label>
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="pack-of-6-bliss"
+                  >
+                    <input
+                      type="radio"
+                      id="pack-of-6-bliss"
+                      name="packaging-bliss"
+                      value="900"
+                      class="hidden"
+                    />
+                    1 kg
+                  </label>
+                </div>
+                <h3 class="font-semibold">Varieties</h3>
+                <!-- Radio Buttons for Egg -->
+                <div class="flex gap-3">
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="eggs-bliss"
+                  >
+                    <input
+                      type="radio"
+                      id="eggs-bliss"
+                      name="varieties-bliss"
+                      value="0"
+                      class="hidden"
+                      checked
+                    />
+                    With Eggs
+                  </label>
+                  <label
+                    class="border px-5 py-2 cursor-pointer flex-1"
+                    for="eggless-bliss"
+                  >
+                    <input
+                      type="radio"
+                      id="eggless-bliss"
+                      name="varieties-bliss"
+                      value="30"
+                      class="hidden"
+                    />
+                    Eggless
+                  </label>
+                </div>
+                <p id="name-required" class="hidden text-amber-400">
+                  Please enter a valid value!
+                </p>
+                <h2 class="font-semibold">Name</h2>
+                <input
+                  id="name"
+                  type="text"
+                  class="bg-transparent border py-2 px-5"
+                />
+                <p id="contact-required" class="hidden text-amber-400">
+                  Please enter a valid value!
+                </p>
+                <h2 class="font-semibold">Contact Number</h2>
+                <input
+                  type="text"
+                  name="contact"
+                  id="contact"
+                  class="bg-transparent border py-2 px-5"
+                />
+                <h3 class="flex gap-3 items-center">
+                  <span class="text-4xl">₹</span>
+                  <span class="text-4xl font-extrabold" id="pricing"></span>
+                </h3>
+              </div>
+              <button
+                id="order"
+                class="border px-5 py-2 cursor-pointer bg-amber-500 hover:bg-amber-600 font-bold"
+              >
+                Order
+              </button>
+            </div>
           </div>
         </div>
       </div>
