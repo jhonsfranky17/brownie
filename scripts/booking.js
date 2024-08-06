@@ -201,19 +201,19 @@ async function handleOrder(clickedItem, package, variety, finalPricing) {
     // API call
 
     try {
-      // const response = await fetch(
-      //   "https://api.emailjs.com/api/v1.0/email/send",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(data),
-      //   }
-      // );
-      // if (!response.ok) {
-      //   throw new Error("Order failed!");
-      // }
+      const response = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Order failed!");
+      }
       clickedItem.classList.remove("pop-in", "fixed", "flex");
       clickedItem.classList.add("hidden");
       success.classList.remove("hidden");
