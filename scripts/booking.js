@@ -8,6 +8,7 @@ const failure = document.getElementById("error-banner");
 let clickedItem;
 let finalPricing = 0;
 let package, variety;
+
 // Adding event listener for each item
 containers.forEach((item) => {
   item.addEventListener("click", () => {
@@ -29,6 +30,7 @@ containers.forEach((item) => {
 
     clickedItem.classList.remove("hidden");
     clickedItem.classList.add("pop-in", "flex");
+    handleResize();
     backdrop.appendChild(clickedItem);
     calculatePrice(clickedItem);
     const order = clickedItem.querySelector("#order");
@@ -222,5 +224,17 @@ async function handleOrder(clickedItem, package, variety, finalPricing) {
       failure.classList.remove("hidden");
       failure.classList.add("flex", "pop-in");
     }
+  }
+}
+
+function handleResize() {
+  if (window.innerWidth > 1024) {
+    clickedItem.querySelector("#photo").classList.add("block");
+    console.log("Greater");
+  } else {
+    console.log("Less than");
+
+    clickedItem.querySelector("#photo").classList.remove("block");
+    clickedItem.querySelector("#photo").classList.add("hidden");
   }
 }

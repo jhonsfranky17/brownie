@@ -525,6 +525,12 @@ video {
 .right-\[50\%\] {
   right: 50%;
 }
+.left-\[50\%\] {
+  left: 50%;
+}
+.top-\[50\%\] {
+  top: 50%;
+}
 .z-10 {
   z-index: 10;
 }
@@ -534,6 +540,10 @@ video {
 .my-\[50\%\] {
   margin-top: 50%;
   margin-bottom: 50%;
+}
+.mx-\[50\%\] {
+  margin-left: 50%;
+  margin-right: 50%;
 }
 .mb-14 {
   margin-bottom: 3.5rem;
@@ -782,6 +792,10 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -826,6 +840,9 @@ video {
 .group:hover .group-hover\:bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
+.group:hover .group-hover\:bg-opacity-0 {
+  --tw-bg-opacity: 0;
+}
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
@@ -851,6 +868,10 @@ video {
 
   .xl\:block {
     display: block;
+  }
+
+  .xl\:inline-block {
+    display: inline-block;
   }
 
   .xl\:flex {
@@ -954,6 +975,10 @@ video {
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .group:hover .xl\:group-hover\:bg-opacity-80 {
+    --tw-bg-opacity: 0.8;
   }
 }
 @media (min-width: 1536px) {
