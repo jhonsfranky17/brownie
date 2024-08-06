@@ -28,7 +28,7 @@ containers.forEach((item) => {
       clickedItem = document.getElementById("bliss");
 
     clickedItem.classList.remove("hidden");
-    clickedItem.classList.add("pop-in", "fixed", "flex");
+    clickedItem.classList.add("pop-in", "flex");
     backdrop.appendChild(clickedItem);
     calculatePrice(clickedItem);
     const order = clickedItem.querySelector("#order");
@@ -37,7 +37,7 @@ containers.forEach((item) => {
     });
     backdrop.classList.add("flex");
     homeButton.classList.remove("hidden");
-    homeButton.classList.add("flex");
+    homeButton.classList.add("flex", "pop-in");
   });
 });
 

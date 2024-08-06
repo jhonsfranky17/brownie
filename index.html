@@ -96,13 +96,18 @@
       </video>
       <!-- Hero -->
       <div
-        class="relative z-10 flex flex-col text-white justify-center items-center h-dvh"
+        class="relative z-10 flex flex-col text-white min-h-dvh 2xl:gap-20 gap-10"
       >
         <!-- Backdrop -->
         <div
           id="backdrop"
-          class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden justify-center items-center"
-        ></div>
+          class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden justify-center items-center gap-5 flex-col-reverse"
+        >
+          <a href="index.html" id="back" class="hidden z-50"
+            ><button class="bg-amber-500 px-10 py-2 font-bold rounded-full">
+              <img src="./assets/icons8-back-24.png" alt="back" /></button
+          ></a>
+        </div>
         <!-- Success Banner -->
         <div
           id="success-banner"
@@ -139,14 +144,21 @@
           >
         </div>
 
-        <nav class="w-full text-center text-6xl pt-5 font-pacifico">
+        <nav class="w-full text-center xl:text-6xl text-4xl pt-5 font-pacifico">
           Heavenly Bites
         </nav>
-        <div class="w-full h-full flex flex-col justify-evenly items-center">
-          <h1 id="title" class="font-redhat font-bold px-10 py-5 bg-amber-500">
+        <div
+          class="w-full h-full flex flex-col xl:justify-evenly items-center 2xl:gap-20 gap-10"
+        >
+          <h1
+            id="title"
+            class="font-redhat font-bold xl:px-10 xl:py-5 py-3 px-3 bg-amber-500"
+          >
             Indulge in Our Signature Home-made Brownies
           </h1>
-          <div class="grid grid-cols-4 gap-10 w-3/4">
+          <div
+            class="grid xl:grid-cols-4 grid-cols-1 gap-10 2xl:w-3/4 2xl:px-0 px-10"
+          >
             <!-- White Brownie -->
             <div class="flex flex-col gap-2 slide-in-left div white">
               <div class="relative group">
@@ -159,7 +171,7 @@
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between 2xl:p-10 xl:p-5 font-medium"
                 >
                   <span
-                    class="font-redhat text-white 2xl:text-lg xl:text-sm opacity-0 group-hover:opacity-100 duration-1000"
+                    class="font-redhat text-white 2xl:text-lg xl:text-base opacity-0 group-hover:opacity-100 duration-1000"
                     >Our White Chocolate Brownie is a delightful twist on the
                     classic treat! This brownie combines the creamy sweetness of
                     white chocolate with a soft, melt-in-your-mouth texture.
@@ -190,7 +202,7 @@
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between 2xl:p-10 xl:p-5 font-medium"
                 >
                   <span
-                    class="font-redhat text-white 2xl:text-lg xl:text-sm opacity-0 group-hover:opacity-100 duration-1000"
+                    class="font-redhat text-white 2xl:text-lg xl:text-base opacity-0 group-hover:opacity-100 duration-1000"
                     >Our Classic Brownie is the heart of our collection,
                     featuring a timeless recipe that delivers a perfectly fudgy
                     texture and deep chocolate flavor. It's the ultimate treat
@@ -218,7 +230,7 @@
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between 2xl:p-10 xl:p-5 font-medium"
                 >
                   <span
-                    class="font-redhat text-white 2xl:text-lg xl:text-sm opacity-0 group-hover:opacity-100 duration-1000"
+                    class="font-redhat text-white 2xl:text-lg xl:text-base opacity-0 group-hover:opacity-100 duration-1000"
                     >Experience the perfect blend of crunch and chocolate with
                     our Roasted Nuts Brownie. This brownie features a rich,
                     fudgy base infused with a generous mix of roasted nuts,
@@ -248,7 +260,7 @@
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 duration-1000 flex flex-col justify-between 2xl:p-10 xl:p-5 font-medium"
                 >
                   <span
-                    class="font-redhat text-white 2xl:text-lg xl:text-sm opacity-0 group-hover:opacity-100 duration-1000"
+                    class="font-redhat text-white 2xl:text-lg xl:text-base opacity-0 group-hover:opacity-100 duration-1000"
                     >Our specially curated Bliss Box is perfect for any
                     occasion, offering an assortment of our finest brownies,
                     including the Classic Brownie, White Chocolate Brownie, and
@@ -267,7 +279,10 @@
             </div>
           </div>
           <!-- Address -->
-          <div id="address" class="flex justify-between items-center w-3/4">
+          <div
+            id="address"
+            class="flex justify-between items-center 2xl:w-3/4 xl:w-full 2xl:px-0 xl:px-10"
+          >
             <div class="flex gap-1 font-redhat slide-in-left">
               <img src="./assets/icons8-mail-24.png" alt="email" />
               <h6>bookings.heavenlybites@gmail.com</h6>
@@ -720,10 +735,6 @@
             </button>
           </div>
         </div>
-        <a href="index.html" id="back" class="hidden z-50 mb-14"
-          ><button class="bg-amber-500 px-10 py-2 font-bold rounded-full">
-            <img src="./assets/icons8-back-24.png" alt="back" /></button
-        ></a>
       </div>
     </div>
     <!-- Scripts -->
